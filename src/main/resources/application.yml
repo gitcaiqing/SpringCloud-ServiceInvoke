@@ -1,0 +1,19 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.100.104:1111/eureka/
+  instance:
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    prefer-ip-address: true
+
+server:
+  port: 1300
+  
+spring:
+  application:
+    name: SpringCloud-ServiceInvoke
+  cloud:
+    client: 
+      ipAddress: 192.168.100.104
+            
+    
